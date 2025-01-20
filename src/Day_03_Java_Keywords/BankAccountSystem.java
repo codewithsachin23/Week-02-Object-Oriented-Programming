@@ -19,7 +19,7 @@ class BankAccount{
         System.out.println("Total number of account :"+totalNumberOfAccount);
 
     }
-    public void display(){
+     void display(){
         System.out.println("Bank Name: " + bankName);
         System.out.println("Account Holder: " + accountHolderName);
         System.out.println("Account Number: " + accountNumber);
@@ -31,18 +31,26 @@ public class BankAccountSystem {
         BankAccount bank1=new BankAccount("4454574284474","Sachin Shukla");
         BankAccount bank2=new BankAccount("5454542145625","Sachin Shukla");
 
-        //calling a Static method directly
+            //calling a Static method directly
         BankAccount.getTotalAccounts();
 
         System.out.println("-----------------------------");
 
-        System.out.println("Details of First Account");
-        bank1.display();
-
+            //check it is instance of class or not and displaying result
+        if(bank1 instanceof BankAccount) {
+            System.out.println("Details of First Account");
+            bank1.display();
+        }else {
+            System.out.println("This is not a instance of class");
+        }
         System.out.println("-----------------------------");
-
-        System.out.println("Details of second Account");
-        bank2.display();
+            //check it is instance of class or notand displaying result
+        if(bank1 instanceof BankAccount) {
+            System.out.println("Details of second Account");
+            bank2.display();
+        }else {
+            System.out.println("This is not a instance of class");
+        }
 
     }
 
