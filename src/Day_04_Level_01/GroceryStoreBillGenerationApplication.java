@@ -47,10 +47,11 @@ class Customer{
 }
 
 class BillGenerator{
+    double totalBill = 0;
     public void generateBill(Customer customer){
         System.out.println("Bill for customer" +customer.getCustomerName());
 
-        double totalBill = 0;
+
         for (Product product : customer.getProducts()) {
             double productPrice = product.calculateProductPrice();
             System.out.println(product.getProductName()  + product.getWeight() + " kg $" + productPrice);
